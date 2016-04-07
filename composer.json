@@ -1,6 +1,6 @@
 {
-    "name": "ace-ticket/lv-api-auth",
-    "description": "A custom Api Auth Driver for Laravel 4",
+    "name": "laravel-apiauth-driver",
+    "description": "A custom Api Auth Driver for Laravel 4.2",
     "authors": [
         {
             "name": "Ehtasham Nasir",

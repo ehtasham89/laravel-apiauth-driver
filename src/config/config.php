@@ -6,5 +6,6 @@ return array(
 	"insert_reminder_ep" => "",
 	"del_reminders_ep" => "",
 	"exits_reminder_ep" => "",
-	"static_token" => ""
+	"static_token" => "",
+	"user_update_token_ep" => ""
 );
