@@ -4,6 +4,9 @@ use Illuminate\Auth\UserInterface;
 
 class LvApiUser implements UserInterface {
 	
+	/*
+	 * protected user object
+	 */
 	protected $user;
 
 	public function __construct($userInfo)
