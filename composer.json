@@ -4,7 +4,8 @@
     "authors": [
         {
             "name": "Ehtasham Nasir",
-            "email": "ehtasham.nasir89@gmail.com"
+            "email": "ehtasham.nasir89@gmail.com",
+	    "webpage": "http://www.nextbridge.com"
         }
     ],
     "require": {
