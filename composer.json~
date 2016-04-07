@@ -1,6 +1,6 @@
 {
     "name": "laravel-apiauth-driver",
-    "description": "A custom Api Auth Driver for Laravel 4.2",
+    "description": "A RESTful api authentication driver for Laravel 4.*",
     "authors": [
         {
             "name": "Ehtasham Nasir",
@@ -17,8 +17,8 @@
             "src/migrations"
         ],
         "psr-0": {
-            "AceTicket\\LvApiAuth\\": "src/"
+            "LvApiAuth\\": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }
