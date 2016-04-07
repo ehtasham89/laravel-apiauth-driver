@@ -1,0 +1,24 @@
+{
+    "name": "ace-ticket/lv-api-auth",
+    "description": "A custom Api Auth Driver for Laravel 4",
+    "authors": [
+        {
+            "name": "Ehtasham Nasir",
+            "email": "ehtasham.nasir89@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "guzzlehttp/guzzle": "~5.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "AceTicket\\LvApiAuth\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
