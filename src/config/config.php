@@ -1,4 +1,7 @@
 <?php
+/*
+ * Endpoint configurations
+ */
 return array(
 	"base_url" => "",
 	"user_login_ep" => "",
