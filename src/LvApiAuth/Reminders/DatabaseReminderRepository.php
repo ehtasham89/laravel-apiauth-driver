@@ -1,4 +1,6 @@
-<?php namespace LvApiAuth\Reminders;
+<?php 
+
+namespace LvApiAuth\Reminders;
 
 use Carbon\Carbon;
 use Illuminate\Database\Connection;

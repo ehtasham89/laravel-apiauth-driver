@@ -1,4 +1,6 @@
-<?php namespace LvApiAuth;
+<?php 
+
+namespace LvApiAuth;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Auth\Guard;

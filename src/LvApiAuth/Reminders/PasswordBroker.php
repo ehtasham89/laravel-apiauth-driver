@@ -1,4 +1,6 @@
-<?php namespace LvApiAuth\Reminders;
+<?php 
+
+namespace LvApiAuth\Reminders;
 
 use Closure;
 use Illuminate\Mail\Mailer;

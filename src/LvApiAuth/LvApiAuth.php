@@ -1,4 +1,6 @@
-<?php  namespace LvApiAuth;
+<?php  
+
+namespace LvApiAuth;
 
 class LvApiAuth {
 	
