@@ -1,12 +1,17 @@
 {
-    "name": "laravel-apiauth-driver",
+
+    "name": "ehtasham89/laravel-apiauth-driver",
+    "type": "library",
     "description": "A RESTful api authentication driver for Laravel 4.*",
+    "keywords": ["laravel driver","laravel","auth driver","api auth driver", "api auth", "laravel api", "laravel webservices"],
+    "homepage": "https://github.com/ehtasham89/laravel-apiauth-driver",
+    "license": "MIT",
     "authors": [
         {
             "name": "Ehtasham Nasir",
             "email": "ehtasham.nasir89@gmail.com",
-	    "webpage": "http://www.nextbridge.com",
-	    "role": "Auther "
+            "homepage": "http://www.nextbridge.com",
+            "role": "Auther"
         }
     ],
     "require": {
