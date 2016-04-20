@@ -3,7 +3,19 @@
     "name": "ehtasham89/laravel-apiauth-driver",
     "type": "library",
     "description": "A RESTful api authentication driver for Laravel 4.*",
-    "keywords": ["laravel driver","laravel","auth driver","api auth driver", "api auth", "laravel api", "laravel webservices"],
+    "keywords": [
+        "laravel",
+        "driver",
+        "laravel",
+        "auth",
+        "driver",
+        "api", 
+        "webservices",
+        "users",
+        "apiauth",
+        "authorization",
+        "authentication"
+    ],
     "homepage": "https://github.com/ehtasham89/laravel-apiauth-driver",
     "license": "MIT",
     "authors": [
@@ -21,11 +33,11 @@
     },
     "autoload": {
         "classmap": [
-            "src/migrations"
+            "src/Ehtasham89"
         ],
         "psr-0": {
-            "LvApiAuth\\": "src/"
+            "Ehtasham89\\LvApiAuth\\": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
