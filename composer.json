@@ -39,5 +39,5 @@
             "Ehtasham89\\LvApiAuth\\": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
