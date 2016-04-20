@@ -21,7 +21,7 @@ class LvApiAuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('ace-ticket/lv-api-auth');
+        $this->package('ehtasham89/laravel-apiauth-driver');
         \Auth::extend('lvapiauth', function () {
             return new Guard(new Providers\LvApiAuthUserProvider(), \App::make('session.store'));
         });

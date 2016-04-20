@@ -41,12 +41,12 @@ class DatabaseReminderRepository implements ReminderRepositoryInterface
         $this->hashKey = $hashKey;
         $this->expires = $expires * 60;
 
-        $this->guzzle = new \GuzzleHttp\Client(['base_url' => Config::get('lv-api-auth::base_url')]);
+        $this->guzzle = new \GuzzleHttp\Client(['base_url' => Config::get('laravel-apiauth-driver::base_url')]);
 
         $this->options = [
             'debug'      => false,
             'headers'    => [
-                'Authorization' => 'Bearer '.Config::get('lv-api-auth::static_token'),
+                'Authorization' => 'Bearer '.Config::get('laravel-apiauth-driver::static_token'),
             ],
         ];
     }
@@ -72,7 +72,7 @@ class DatabaseReminderRepository implements ReminderRepositoryInterface
         $this->options['query'] = $this->getPayload($email, $token);
 
         try {
-            $this->guzzle->post(Config::get('lv-api-auth::insert_reminder_ep'), $this->options);
+            $this->guzzle->post(Config::get('laravel-apiauth-driver::insert_reminder_ep'), $this->options);
         } catch (\Exception $e) {
             throw $e;
         }
@@ -94,7 +94,7 @@ class DatabaseReminderRepository implements ReminderRepositoryInterface
         ];
 
         try {
-            $response = $this->guzzle->post(Config::get('lv-api-auth::del_reminders_ep'), $this->options);
+            $response = $this->guzzle->post(Config::get('laravel-apiauth-driver::del_reminders_ep'), $this->options);
 
             $response = $response->getBody();
 
@@ -137,7 +137,7 @@ class DatabaseReminderRepository implements ReminderRepositoryInterface
         ];
 
         try {
-            $response = $this->guzzle->post(Config::get('lv-api-auth::exits_reminder_ep'), $this->options);
+            $response = $this->guzzle->post(Config::get('laravel-apiauth-driver::exits_reminder_ep'), $this->options);
 
             $response = $response->getBody();
 
@@ -191,7 +191,7 @@ class DatabaseReminderRepository implements ReminderRepositoryInterface
         ];
 
         try {
-            $this->guzzle->post(Config::get('lv-api-auth::del_reminders_ep'), $this->options);
+            $this->guzzle->post(Config::get('laravel-apiauth-driver::del_reminders_ep'), $this->options);
         } catch (\Exception $e) {
             throw $e;
         }
@@ -211,7 +211,7 @@ class DatabaseReminderRepository implements ReminderRepositoryInterface
         ];
 
         try {
-            $this->guzzle->post(Config::get('lv-api-auth::del_reminders_ep'), $this->options);
+            $this->guzzle->post(Config::get('laravel-apiauth-driver::del_reminders_ep'), $this->options);
         } catch (\Exception $e) {
             throw $e;
         }

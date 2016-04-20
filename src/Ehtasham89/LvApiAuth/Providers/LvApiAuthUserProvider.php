@@ -14,11 +14,11 @@ class LvApiAuthUserProvider implements UserProviderInterface
 
     public function __construct()
     {
-        $this->guzzle = new \GuzzleHttp\Client(['base_url' => Config::get('lv-api-auth::base_url')]);
+        $this->guzzle = new \GuzzleHttp\Client(['base_url' => Config::get('laravel-apiauth-driver::base_url')]);
         $this->options = [
             'debug'      => false,
             'headers'    => [
-                'Authorization' => 'Bearer '.Config::get('lv-api-auth::static_token'),
+                'Authorization' => 'Bearer '.Config::get('laravel-apiauth-driver::static_token'),
             ],
         ];
     }
@@ -30,7 +30,7 @@ class LvApiAuthUserProvider implements UserProviderInterface
         ];
 
         try {
-            $response = $this->guzzle->post(Config::get('lv-api-auth::get_user_ep'), $this->options);
+            $response = $this->guzzle->post(Config::get('laravel-apiauth-driver::get_user_ep'), $this->options);
 
             $response = $response->getBody();
 
@@ -60,7 +60,7 @@ class LvApiAuthUserProvider implements UserProviderInterface
         $this->options['query'] = $credentials;
 
         try {
-            $response = $this->guzzle->post(Config::get('lv-api-auth::get_user_ep'), $this->options);
+            $response = $this->guzzle->post(Config::get('laravel-apiauth-driver::get_user_ep'), $this->options);
 
             $response = $response->getBody();
 
@@ -85,7 +85,7 @@ class LvApiAuthUserProvider implements UserProviderInterface
     {
         $this->options['query'] = $credentials;
 
-        $response = $this->guzzle->post(Config::get('lv-api-auth::user_login_ep'), $this->options);
+        $response = $this->guzzle->post(Config::get('laravel-apiauth-driver::user_login_ep'), $this->options);
 
         $response = $response->getBody();
 
@@ -119,7 +119,7 @@ class LvApiAuthUserProvider implements UserProviderInterface
                 'remember_token' => $token,
             ];
             $this->options['query'] = $query;
-            $response = $this->guzzle->patch(Config::get('lv-api-auth::user_update_token_ep'), $this->options);
+            $response = $this->guzzle->patch(Config::get('laravel-apiauth-driver::user_update_token_ep'), $this->options);
             $response = $response->getBody();
             $response = json_decode($response);
             if ($response->status == 1) {
