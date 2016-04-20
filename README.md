@@ -5,7 +5,7 @@ A RESTful APi authenication driver for Laravel 4.2
 
 ## Installation Guide:
 **Following lines in your laravel composer.json file require array:** <br>
-`"ehtasham89/laravel-apiauth-driver": "dev-master"`
+`"ehtasham89/laravel-apiauth-driver": "1.*@dev"` <br>
 **Palce following service provider links in app/config/app.php providers array:**
 ```
 'Ehtasham89\LvApiAuth\LvApiAuthServiceProvider',
