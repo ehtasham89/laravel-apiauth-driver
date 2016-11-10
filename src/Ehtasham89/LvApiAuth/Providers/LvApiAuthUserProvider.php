@@ -15,6 +15,7 @@ class LvApiAuthUserProvider implements UserProviderInterface
     public function __construct()
     {
         $this->guzzle = new \GuzzleHttp\Client(['base_url' => Config::get('laravel-apiauth-driver::base_url')]);
+        
         $this->options = [
             'debug'      => false,
             'headers'    => [
@@ -45,6 +46,7 @@ class LvApiAuthUserProvider implements UserProviderInterface
             }
         } catch (\Exception $e) {
             throw $e;
+            
             $response = null;
         }
 
@@ -83,6 +85,10 @@ class LvApiAuthUserProvider implements UserProviderInterface
 
     public function validateCredentials(UserInterface $user, array $credentials)
     {
+        foreach ($credentials as $key) {
+ +          if (empty($key)) return null;
+ +      }
+
         $this->options['query'] = $credentials;
 
         $response = $this->guzzle->post(Config::get('laravel-apiauth-driver::user_login_ep'), $this->options);
@@ -118,10 +124,14 @@ class LvApiAuthUserProvider implements UserProviderInterface
                 'id'             => $user->getAuthIdentifier(),
                 'remember_token' => $token,
             ];
+            
             $this->options['query'] = $query;
+            
             $response = $this->guzzle->patch(Config::get('laravel-apiauth-driver::user_update_token_ep'), $this->options);
+            
             $response = $response->getBody();
             $response = json_decode($response);
+            
             if ($response->status == 1) {
                 return true;
             } else {
